@@ -11,6 +11,7 @@ import (
 // a plugin and host. If the handshake fails, a user friendly error is shown.
 // This prevents users from executing bad plugins or executing a plugin
 // directory. It is a UX feature, not a security feature.
+// TEST
 var handshakeConfig = goPlugin.HandshakeConfig{
 	ProtocolVersion:  1,
 	MagicCookieKey:   "ARGO_ROLLOUTS_RPC_PLUGIN",
