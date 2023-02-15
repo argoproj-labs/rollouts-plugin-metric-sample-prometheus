@@ -24,9 +24,6 @@ into the rollouts controller container. The second method is to use a HTTP(S) se
 
 ### Mounting the plugin executable into the rollouts controller container
 
-To use this method, you will need to build or download the plugin executable and then mount it into the rollouts controller container.
-The plugin executable must be mounted into the rollouts controller container at the path specified by the `--metric-plugin-location` flag.
-
 There are a few ways to mount the plugin executable into the rollouts controller container. Some of these will depend on your
 particular infrastructure. Here are a few methods:
 
