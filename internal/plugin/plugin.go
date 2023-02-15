@@ -36,9 +36,9 @@ type Config struct {
 	Query string `json:"query,omitempty" protobuf:"bytes,2,opt,name=query"`
 }
 
-func (g *RpcPlugin) NewMetricsPlugin(metric v1alpha1.Metric) types.RpcError {
+func (g *RpcPlugin) InitPlugin(metric v1alpha1.Metric) types.RpcError {
 	config := Config{}
-	err := json.Unmarshal(metric.Provider.Plugin["prometheus"], &config)
+	err := json.Unmarshal(metric.Provider.Plugin["argoproj-labs/sample-prometheus"], &config)
 	if err != nil {
 		return types.RpcError{ErrorString: err.Error()}
 	}
@@ -56,7 +56,7 @@ func (g *RpcPlugin) Run(anaysisRun *v1alpha1.AnalysisRun, metric v1alpha1.Metric
 	}
 
 	config := Config{}
-	json.Unmarshal(metric.Provider.Plugin["prometheus"], &config)
+	json.Unmarshal(metric.Provider.Plugin["argoproj-labs/sample-prometheus"], &config)
 
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
@@ -110,7 +110,7 @@ func (g *RpcPlugin) GetMetadata(metric v1alpha1.Metric) map[string]string {
 	metricsMetadata := make(map[string]string)
 
 	config := Config{}
-	json.Unmarshal(metric.Provider.Plugin["prometheus"], &config)
+	json.Unmarshal(metric.Provider.Plugin["argoproj-labs/sample-prometheus"], &config)
 	if config.Query != "" {
 		metricsMetadata["ResolvedPrometheusQuery"] = config.Query
 	}

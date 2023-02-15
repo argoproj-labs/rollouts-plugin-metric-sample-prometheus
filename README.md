@@ -45,7 +45,7 @@ data:
   plugins: |-
     metrics:
     - name: "prometheus" # name of the plugin uses the name to find this configuration, it must match the name required by the plugin
-      pluginLocation: "file://./my-custom-plugin" # supports http(s):// urls and file://
+      location: "file://./my-custom-plugin" # supports http(s):// urls and file://
 ```
 
 ### Using a HTTP(S) server to host the plugin executable
@@ -62,8 +62,8 @@ data:
   plugins: |-
     metrics:
     - name: "prometheus" # name of the plugin uses the name to find this configuration, it must match the name required by the plugin
-      pluginLocation: "https://github.com/argoproj-labs/sample-rollouts-metric-plugin/releases/download/v0.0.3/metric-plugin-linux-amd64" # supports http(s):// urls and file://
-      pluginSha256: "08f588b1c799a37bbe8d0fc74cc1b1492dd70b2c" #optional sha256 checksum of the plugin executable
+      location: "https://github.com/argoproj-labs/sample-rollouts-metric-plugin/releases/download/v0.0.3/metric-plugin-linux-amd64" # supports http(s):// urls and file://
+      sha256: "08f588b1c799a37bbe8d0fc74cc1b1492dd70b2c" #optional sha256 checksum of the plugin executable
 ```
 
 ### Sample Analysis Template
@@ -87,7 +87,7 @@ spec:
       count: 3
       provider:
         plugin:
-          prometheus:
+          argoproj-labs/sample-prometheus:
             address: http://prometheus.local
             step: 1m
             query: |
