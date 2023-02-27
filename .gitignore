@@ -5,6 +5,9 @@
 *.so
 *.dylib
 metric-plugin
+metric-plugin-darwin-*
+metric-plugin-linux-*
+.idea
 
 # Test binary, built with `go test -c`
 *.test
