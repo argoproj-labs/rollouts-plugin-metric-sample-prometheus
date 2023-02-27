@@ -2,18 +2,18 @@ module github.com/argoproj-labs/sample-rollouts-metric-plugin
 
 go 1.19
 
-replace github.com/argoproj/argo-rollouts => github.com/zachaller/argo-rollouts v1.2.1-0.20230215192816-32627786696f
+replace github.com/argoproj/argo-rollouts => github.com/zachaller/argo-rollouts v1.2.1-0.20230227164909-1b6c165bb002
 
 require (
 	github.com/argoproj/argo-rollouts v0.0.0-00010101000000-000000000000
 	github.com/hashicorp/go-plugin v1.4.8
 	github.com/prometheus/client_golang v1.14.0
-	github.com/prometheus/common v0.39.0
+	github.com/prometheus/common v0.40.0
 	github.com/sirupsen/logrus v1.9.0
 )
 
 require (
-	github.com/antonmedv/expr v1.12.0 // indirect
+	github.com/antonmedv/expr v1.12.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/emicklei/go-restful/v3 v3.8.0 // indirect
 	github.com/fatih/color v1.7.0 // indirect
@@ -38,12 +38,12 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/oklog/run v1.0.0 // indirect
-	golang.org/x/net v0.5.0 // indirect
+	golang.org/x/net v0.7.0 // indirect
 	golang.org/x/oauth2 v0.4.0 // indirect
-	golang.org/x/sys v0.4.0 // indirect
-	golang.org/x/term v0.4.0 // indirect
-	golang.org/x/text v0.6.0 // indirect
-	golang.org/x/time v0.0.0-20220609170525-579cf78fd858 // indirect
+	golang.org/x/sys v0.5.0 // indirect
+	golang.org/x/term v0.5.0 // indirect
+	golang.org/x/text v0.7.0 // indirect
+	golang.org/x/time v0.3.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f // indirect
 	google.golang.org/grpc v1.53.0 // indirect
