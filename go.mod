@@ -1,4 +1,4 @@
-module github.com/argoproj-labs/sample-rollouts-metric-plugin
+module github.com/argoproj-labs/rollouts-plugin-metric-sample-prometheus
 
 go 1.19
 

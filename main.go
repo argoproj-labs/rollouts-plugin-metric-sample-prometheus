@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/argoproj-labs/sample-rollouts-metric-plugin/internal/plugin"
+	"github.com/argoproj-labs/rollouts-plugin-metric-sample-prometheus/internal/plugin"
 	rolloutsPlugin "github.com/argoproj/argo-rollouts/metricproviders/plugin/rpc"
 	goPlugin "github.com/hashicorp/go-plugin"
 	log "github.com/sirupsen/logrus"
@@ -24,7 +24,7 @@ func main() {
 		LogCtx: logCtx,
 	}
 	// pluginMap is the map of plugins we can dispense.
-	var pluginMap = map[string]goPlugin.Plugin{
+	pluginMap := map[string]goPlugin.Plugin{
 		"RpcMetricProviderPlugin": &rolloutsPlugin.RpcMetricProviderPlugin{Impl: rpcPluginImp},
 	}
 
